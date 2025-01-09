@@ -10,12 +10,12 @@ export async function GET() {
     frame: {
       version: "1",
       name: "Frames v2 Demo",
-      iconUrl: `${appUrl}/icon.png`,
+      iconUrl: `https://raw.githubusercontent.com/cashlessman/images/refs/heads/main/people.png`,
       homeUrl: appUrl,
-      imageUrl: `${appUrl}/frames/hello/opengraph-image`,
+      imageUrl: `https://raw.githubusercontent.com/cashlessman/images/refs/heads/main/banner.png`,
       buttonTitle: "SEE",
       splashImageUrl: `https://raw.githubusercontent.com/cashlessman/images/refs/heads/main/pfp.png`,
-      splashBackgroundColor: "#f7f7f7",
+      splashBackgroundColor: "#333333",
       webhookUrl: `${appUrl}/api/webhook`,
     },
   };

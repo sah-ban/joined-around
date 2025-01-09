@@ -7,13 +7,13 @@ const frame = {
   version: "next",
   imageUrl: `${appUrl}/frames/hello/opengraph-image`,
   button: {
-    title: "Launch Frame",
+    title: "SEE",
     action: {
       type: "launch_frame",
-      name: "Farcaster Frames v2 Demo",
-      url: `${appUrl}/frames/hello/`,
-      splashImageUrl: `${appUrl}/splash.png`,
-      splashBackgroundColor: "#f7f7f7",
+      name: "See Who Joined Around You",
+      url: `${appUrl}`,
+      splashImageUrl: `https://raw.githubusercontent.com/cashlessman/images/refs/heads/main/pfp.png`,
+      splashBackgroundColor: "#333333",
     },
   },
 };
