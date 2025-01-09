@@ -110,12 +110,17 @@ const toggleBottomRows = () => {
   
   if (!context?.user.fid)
     return (
-      <div className="flex flex-col items-center justify-center h-full text-white text-2xl p-4">
-        <p>you need to access this frame from inside a farcaster client</p>
-        <p>(click on the Logo to open in Warpcast)</p>
-
+      <div className="flex items-center justify-center h-screen bg-gray-900">
+      <div className="flex flex-col items-center justify-center text-white text-2xl p-4">
+        <p className="flex items-center justify-center text-center">
+          you need to access this frame from inside a farcaster client
+        </p>
+        <p className="flex items-center justify-center text-center">
+          (click on the logo to open in Warpcast)
+        </p>
+    
         <div className="flex items-center justify-center p-2 bg-white rounded-lg mt-4">
-          <Link href="https://warpcast.com/cashlessman.eth/0xc798a604" className="shadow-lg shadow-white">
+          <Link href="https://warpcast.com/cashlessman.eth/0xefeba64c" className="shadow-lg shadow-white">
             <Image
               src="https://warpcast.com/og-logo.png"
               alt="warpcast logo"
@@ -125,6 +130,8 @@ const toggleBottomRows = () => {
           </Link>
         </div>
       </div>
+    </div>
+    
     );
 
 
