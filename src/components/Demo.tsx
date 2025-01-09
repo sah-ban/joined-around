@@ -80,7 +80,7 @@ export default function DemoN(
 
 
 const shareText = encodeURIComponent(
-  `Check Who Joined Around You \n \nV2 frame by @cashlessman.eth`
+  `See Who Joined Around You \n \nV2 frame by @cashlessman.eth`
 );
 
 const shareUrl = `https://warpcast.com/~/compose?text=${shareText}&embeds[]=https://around-joined.vercel.app/`;
@@ -120,7 +120,7 @@ const toggleBottomRows = () => {
         </p>
     
         <div className="flex items-center justify-center p-2 bg-white rounded-lg mt-4">
-          <Link href="https://warpcast.com/cashlessman.eth/0xefeba64c" className="shadow-lg shadow-white">
+          <Link href="https://warpcast.com/cashlessman.eth/0xa030b72c" className="shadow-lg shadow-white">
             <Image
               src="https://warpcast.com/og-logo.png"
               alt="warpcast logo"
