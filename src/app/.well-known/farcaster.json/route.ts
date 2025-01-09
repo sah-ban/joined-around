@@ -3,11 +3,9 @@ export async function GET() {
 
   const config = {
     accountAssociation: {
-      header:
-        "eyJmaWQiOjM2MjEsInR5cGUiOiJjdXN0b2R5Iiwia2V5IjoiMHgyY2Q4NWEwOTMyNjFmNTkyNzA4MDRBNkVBNjk3Q2VBNENlQkVjYWZFIn0",
-      payload: "eyJkb21haW4iOiJmcmFtZXMtdjIudmVyY2VsLmFwcCJ9",
-      signature:
-        "MHhiNDIwMzQ1MGZkNzgzYTExZjRiOTllZTFlYjA3NmMwOTdjM2JkOTY1NGM2ODZjYjkyZTAyMzk2Y2Q0YjU2MWY1MjY5NjI5ZGQ5NTliYjU0YzEwOGI4OGVmNjdjMTVlZTdjZDc2YTRiMGU5NzkzNzA3YzkxYzFkOWFjNTg0YmQzNjFi",
+      header: "eyJmaWQiOjI2ODQzOCwidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweDIxODA4RUUzMjBlREY2NGMwMTlBNmJiMEY3RTRiRkIzZDYyRjA2RWMifQ",
+      payload: "eyJkb21haW4iOiJhcm91bmQtam9pbmVkLnZlcmNlbC5hcHAifQ",
+      signature: "MHhhYjFmNzkwNzc4ZmI4ZTI2YzA4ZGQ4ZjdjYjA3MDE4MGE4MmU0OWExMjk0NmQxN2NlZGQ5MDU3NDRmNzhjZDNmNmIzMmVmM2FiNTU4M2NkMTVkODk2MWY0OTFkZTY5YjY1NDE3ZDE3NTNjY2M3NWI5NjhlNmI1YWE4M2Y0YzAxZjFj"
     },
     frame: {
       version: "1",
@@ -15,8 +13,8 @@ export async function GET() {
       iconUrl: `${appUrl}/icon.png`,
       homeUrl: appUrl,
       imageUrl: `${appUrl}/frames/hello/opengraph-image`,
-      buttonTitle: "Launch Frame",
-      splashImageUrl: `${appUrl}/splash.png`,
+      buttonTitle: "SEE",
+      splashImageUrl: `https://raw.githubusercontent.com/cashlessman/images/refs/heads/main/pfp.png`,
       splashBackgroundColor: "#f7f7f7",
       webhookUrl: `${appUrl}/api/webhook`,
     },

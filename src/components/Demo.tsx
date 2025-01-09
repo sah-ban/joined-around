@@ -5,9 +5,6 @@ import sdk, {
   FrameNotificationDetails,
  type Context,
 } from "@farcaster/frame-sdk";
-
-
-import { Button } from "~/components/ui/Button";
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -15,12 +12,7 @@ export default function Demo(
 ) {
   const [context, setContext] = useState<Context.FrameContext>();
   const [isSDKLoaded, setIsSDKLoaded] = useState(false);
-  const [addFrameResult, setAddFrameResult] = useState("");
-  const [notificationDetails, setNotificationDetails] =
-    useState<FrameNotificationDetails | null>(null);
-  useEffect(() => {
-    setNotificationDetails(context?.client.notificationDetails ?? null);
-  }, [context]);
+
 
   useEffect(() => {
     const load = async () => {
@@ -39,10 +31,6 @@ export default function Demo(
 
   const openWarpcastUrl = useCallback(() => {
     sdk.actions.openUrl(shareUrl);
-  }, []);
-
-  const tip = useCallback(() => {
-    sdk.actions.openUrl(tipUrl);
   }, []);
 
   const close = useCallback(() => {
@@ -93,11 +81,7 @@ const shareText = encodeURIComponent(
   `Check Who Joined Around You \n \nV2 frame by @cashlessman.eth`
 );
 
-const tiped =  encodeURIComponent(
-``
-);
 const shareUrl = `https://warpcast.com/~/compose?text=${shareText}&embeds[]=https://degen-v2.vercel.app/`;
-const tipUrl = `https://warpcast.com/~/compose?text=${tiped}&parentCastHash=0xefeba64cabdcfbc619b7d6003f993f460e3a6cef`;
 const  default_image_url="https://wrpcd.net/cdn-cgi/imagedelivery/BXluQx4ige9GuW0Ia56BHw/7df1c31c-5721-4d33-2d2c-a102a8b3ca00/original" 
 
 const handleImageClick = (fid: number | null) => {
