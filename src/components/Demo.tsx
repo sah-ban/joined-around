@@ -167,7 +167,13 @@ const toggleBottomRows = () => {
     return (
       <div >
 <Header/>
-<Grid/>
+
+{ context?.user.fid && context.user.fid < 8 
+  ? <Grid2/>
+  : <Grid1/>
+}
+
+
 <Footer/>
 
 </div>
@@ -195,9 +201,9 @@ const toggleBottomRows = () => {
     );
   }
   
-  function Grid( ) {
+  function Grid1( ) {
     return (
-      <div className="flex flex-row justify-self-center w-full">
+<div className="flex flex-col w-full">
 
       <div className="p-3 flex flex-col justify-between">
         <div className="flex justify-center mb-3">
@@ -222,14 +228,75 @@ const toggleBottomRows = () => {
                   isHidden ? "hidden" : ""
                 }`}
               >
-                <img
-                  src={item?.pfp?.url || default_image_url}
-                  alt={`Profile of ${item?.username || "N/A"}`}
-                  className={`w-14 aspect-square rounded-full object-cover cursor-pointer ${
-                    context?.user.fid === item?.fid ? "w-20 rounded-lg" : ""
-                  }`}
-                  onClick={() => handleImageClick(item?.fid)}
-                />
+<img
+  src={item?.pfp?.url || default_image_url}
+  alt={`Profile of ${item?.username || "N/A"}`}
+  className={`w-14 aspect-square rounded-full object-cover cursor-pointer ${
+    context?.user.fid === item?.fid ? "w-20 rounded-lg" : ""
+  }`}
+  onError={(e) => {
+    const target = e.target as HTMLImageElement;
+    target.src = default_image_url; // Fallback to default image if src fails
+  }}
+  onClick={() => handleImageClick(item?.fid)}
+/>
+
+                <span className="text-xs text-gray-300 mt-2">{item?.fid ?? "N/A"}</span>
+
+                <span className="text-xs font-semibold text-white mt-1">
+                  @{item?.username ?? "N/A"}
+                  
+  
+                </span>
+              </div>
+            );
+          })}
+        </div>
+  
+        {/* Bottom Button */}
+        <div className="flex justify-center mt-4">
+          <button
+            onClick={toggleBottomRows}
+            className="bg-[#422E8D] text-white px-4 py-2 rounded-lg"
+          >
+            {showBottomHiddenRows ? "Hide" : "See next six users "}
+          </button>
+        </div>
+      </div>
+      </div>
+    );
+  }
+  function Grid2( ) {
+    return (
+<div className="flex flex-col w-full">
+
+      <div className="p-3 flex flex-col justify-between">
+
+        <div className="grid grid-cols-3 gap-3">
+          {data?.data.slice(6, 27).map((item, index) => {
+            const isHidden =
+             (!showBottomHiddenRows && index >= 15);
+  
+            return (
+              <div
+                key={index}
+                className={`flex flex-col items-center justify-center bg-[#2C213F] rounded-xl shadow-lg p-3 transition-transform transform hover:scale-105 ${
+                  isHidden ? "hidden" : ""
+                }`}
+              >
+<img
+  src={item?.pfp?.url || default_image_url}
+  // alt={`Profile of ${item?.username || "N/A"}`}
+  className={`w-14 aspect-square rounded-full object-cover cursor-pointer ${
+    context?.user.fid === item?.fid ? "w-20 rounded-lg" : ""
+  }`}
+  onError={(e) => {
+    const target = e.target as HTMLImageElement;
+    target.src = default_image_url; // Fallback to default image if src fails
+  }}
+  onClick={() => handleImageClick(item?.fid)}
+/>
+
                 <span className="text-xs text-gray-300 mt-2">{item?.fid ?? "N/A"}</span>
 
                 <span className="text-xs font-semibold text-white mt-1">

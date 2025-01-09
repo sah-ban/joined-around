@@ -6,6 +6,8 @@ export async function GET(req: NextRequest) {
   console.log(`Full URL: ${req.url}`);
 
   const fid = req.nextUrl.searchParams.get("fid");
+    // const fid = "10"
+
   console.log(`Requested fid: ${fid}`);
 
   if (!fid) {
@@ -28,7 +30,7 @@ export async function GET(req: NextRequest) {
     console.log(`Fetching data from API for fid: ${fidNum}`);
 
     // Determine the value of nfid based on fidNum
-    const nfid = fidNum < 14 ? 1 : fidNum - 13;
+    const nfid = fidNum < 8 ? 1 : fidNum - 13;
 
     // Array to hold the details for the next 17 fid values
     const userDetailsPromises = [];
