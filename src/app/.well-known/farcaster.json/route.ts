@@ -9,7 +9,7 @@ export async function GET() {
     },
     frame: {
       version: "1",
-      name: "See Who Joined Around You",
+      name: "Joined Around You",
       iconUrl: `https://raw.githubusercontent.com/cashlessman/images/refs/heads/main/people.png`,
       homeUrl: appUrl,
       imageUrl: `https://raw.githubusercontent.com/cashlessman/images/refs/heads/main/banner.png`,
