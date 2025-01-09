@@ -9,7 +9,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export default function DemoN(
-  { title }: { title?: string } = { title: "demo title" }
+  { title }: { title?: string } = { title: "See Who Joined Around You" }
 
 ) {
   const [context, setContext] = useState<Context.FrameContext>();
