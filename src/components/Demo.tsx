@@ -2,7 +2,7 @@
 
 import { useEffect, useCallback, useState } from "react";
 import sdk, {
-  FrameNotificationDetails,
+  // FrameNotificationDetails,
  type Context,
 } from "@farcaster/frame-sdk";
 import Link from 'next/link';
