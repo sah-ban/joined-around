@@ -8,7 +8,9 @@ import sdk, {
 import Link from 'next/link';
 import Image from 'next/image';
 
-export default function Demo(
+export default function DemoN(
+  { title }: { title?: string } = { title: "demo title" }
+
 ) {
   const [context, setContext] = useState<Context.FrameContext>();
   const [isSDKLoaded, setIsSDKLoaded] = useState(false);
@@ -128,6 +130,7 @@ const toggleBottomRows = () => {
 
   return (
 <div className="w-auto h-max bg-[#17111F]  text-white flex flex-col">
+<h1 className="text-2xl font-bold text-center mb-4 hidden">{title}</h1>
 
 {Array.isArray(data?.data) && data?.data.length > 1 
   ? (
