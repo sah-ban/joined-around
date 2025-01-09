@@ -7,7 +7,7 @@ const frame = {
   version: "next",
   imageUrl: `https://raw.githubusercontent.com/cashlessman/images/refs/heads/main/banner.png`,
   button: {
-    title: "See Who Joined Around You",
+    title: "SEE",
     action: {
       type: "launch_frame",
       name: "Joined Around You",
@@ -24,8 +24,8 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: " @cashlessman.eth",
     openGraph: {
-      title: "Farcaster Frames v2 Demo",
-      description: "A Farcaster Frames v2 demo app.",
+      title: "Farcaster Frame v2 By @cashlessman.eth",
+      description: "A Farcaster Frames v2",
     },
     other: {
       "fc:frame": JSON.stringify(frame),

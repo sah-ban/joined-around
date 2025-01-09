@@ -83,7 +83,7 @@ const shareText = encodeURIComponent(
   `Check Who Joined Around You \n \nV2 frame by @cashlessman.eth`
 );
 
-const shareUrl = `https://warpcast.com/~/compose?text=${shareText}&embeds[]=https://degen-v2.vercel.app/`;
+const shareUrl = `https://warpcast.com/~/compose?text=${shareText}&embeds[]=https://around-joined.vercel.app/`;
 const  default_image_url="https://wrpcd.net/cdn-cgi/imagedelivery/BXluQx4ige9GuW0Ia56BHw/7df1c31c-5721-4d33-2d2c-a102a8b3ca00/original" 
 
 const handleImageClick = (fid: number | null) => {
