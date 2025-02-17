@@ -158,6 +158,12 @@ function getRowNumber(itemNumber: number): number {
 
 
   return (
+    <div style={{ 
+      paddingTop: context?.client.safeAreaInsets?.top ?? 0, 
+      paddingBottom: context?.client.safeAreaInsets?.bottom ?? 0,
+      paddingLeft: context?.client.safeAreaInsets?.left ?? 0,
+      paddingRight: context?.client.safeAreaInsets?.right ?? 0 ,
+    }}>
 <div className="w-auto bg-[#17111F] text-white flex flex-col">
 <h1 className="hidden">{title}</h1>
 
@@ -169,6 +175,7 @@ function getRowNumber(itemNumber: number): number {
     )
 }
 
+  </div>
   </div>
 
   );
