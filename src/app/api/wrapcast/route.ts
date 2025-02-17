@@ -30,12 +30,12 @@ export async function GET(req: NextRequest) {
     console.log(`Fetching data from API for fid: ${fidNum}`);
 
     // Determine the value of nfid based on fidNum
-    const nfid = fidNum < 8 ? 1 : fidNum - 13;
+    const nfid = fidNum < 78 ? 1 : fidNum - 76;
 
     // Array to hold the details for the next 17 fid values
     const userDetailsPromises = [];
     
-    for (let i = 0; i < 27; i++) {
+    for (let i = 0; i < 153; i++) {
       const currentFid = nfid + i;
       const apiUrl = `https://api.warpcast.com/v2/user?fid=${currentFid}`;
       userDetailsPromises.push(
@@ -74,8 +74,8 @@ export async function GET(req: NextRequest) {
     // Wait for all the API calls to finish
     const userDetails = await Promise.all(userDetailsPromises);
 
-    // console.log("Fetched user details:", userDetails);
-    console.log("hehe")
+    // console.log( userDetails);
+    // console.log("hehe")
     // console.log(userDetails[0]?.fid )
 
     return NextResponse.json(userDetails);
